@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+        } 
+        * {
+            box-sizing: border-box;
+        }
+        .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+        }
+        .responsive {
+            width: 50%;
+            height: auto;
+        }
+        input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.wikihow.com/images/thumb/1/1a/Android7search.png/30px-Android7search.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        @media only screen and (max-width:620px) {
+            /* For mobile phones: */
+            .menu,
+            .main,
+            .right {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r92/examples/js/loaders/GLTFLoader.js"></script>
+    <script src='https://threejs.org/examples/js/controls/TrackballControls.js'></script>
+    <div style="overflow:auto">
+        <div class="main">
+            <form onsubmit="showInput(); return false;">
+                <h2>Gravure:</h2>
+                <input type="text" maxlength="20" id="user_input" value="Message" class="formInput" />
+                <input type="submit" value="Submit" class="buttonInput">
+                </br>
+                <script src="js/box.js"></script>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
